@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MergedEd">
         <activity
+            android:name=".WordOrderActivity"
+            android:exported="true" />
+        <activity
             android:name=".RightOrWrongActivity"
             android:exported="true" />
         <activity

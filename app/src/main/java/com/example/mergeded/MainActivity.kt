@@ -11,10 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn_click_me = findViewById(R.id.buttonFlashcards) as Button
-        btn_click_me.setOnClickListener {
-            ////Toast.makeText(this@MainActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
+        val buttonFlashCards = findViewById(R.id.buttonFlashcards) as Button
+        buttonFlashCards.setOnClickListener {
             val intent = Intent(this, FlashcardActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonWordOrder = findViewById(R.id.buttonWordOrder) as Button
+        buttonWordOrder.setOnClickListener {
+            val intent = Intent(this, WordOrderActivity::class.java)
             startActivity(intent)
         }
     }
