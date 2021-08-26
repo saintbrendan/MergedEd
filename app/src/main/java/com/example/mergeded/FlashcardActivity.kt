@@ -55,12 +55,10 @@ class FlashcardActivity : AppCompatActivity() {
         imageView.setOnClickListener {
             mediaPlayer?.start()
 
-            val word = getResources().getResourceEntryName(imageList[0]);
             val intent = Intent(this, RightOrWrongActivity::class.java).apply {
                 putExtra(EXTRA_WORDLIST, imageList.toIntArray())
             }
             startActivity(intent)
-
         }
     }
 }

@@ -52,10 +52,9 @@ class WordsAdapter(private val onDragStarted: (String) -> Unit) : ListAdapter<St
         fun bind(word: String) = itemView.run {
             findViewById<TextView>(R.id.tvWord).text = word
 
-            setOnClickListener {view->
+            setOnClickListener {
                 removeItem(adapterPosition)
                 sentenceAdapter.addItem(word)
-                true
             }
         }
     }

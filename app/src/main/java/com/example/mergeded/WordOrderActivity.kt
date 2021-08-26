@@ -78,6 +78,5 @@ class WordOrderActivity : AppCompatActivity() {
                 button.text = "Confirm"
             }
         }
-
     }
 }
