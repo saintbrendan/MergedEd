@@ -1,5 +1,6 @@
 package com.example.mergeded
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -54,8 +55,7 @@ class WordOrderActivity : AppCompatActivity() {
 
         binding.rvWords.adapter = wordsAdapter
 
-        val buttonID = R.id.button2
-        val button = findViewById<Button>(buttonID)
+        val button = findViewById<Button>(R.id.button2)
         button.setOnClickListener {
             if (sentenceAdapter.currentList == sentences[iSentence]) {
                 if (button.text == "Confirm") {
@@ -77,6 +77,11 @@ class WordOrderActivity : AppCompatActivity() {
                 button.setBackgroundColor(Color.RED)
                 button.text = "Confirm"
             }
+        }
+        val buttonHome = findViewById<Button>(R.id.buttonHome)
+        buttonHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
