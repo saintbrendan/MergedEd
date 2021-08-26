@@ -14,6 +14,7 @@ class RightOrWrongActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView)
         val buttonYes = findViewById<Button>(R.id.buttonYes)
         val buttonNo = findViewById<Button>(R.id.buttonNo)
+        val buttonHome = findViewById<Button>(R.id.buttonHome)
 
         val imageList = intent.getIntArrayExtra(EXTRA_WORDLIST)?.toMutableList() ?: mutableListOf<Int>()
         val word = getResources().getResourceEntryName(imageList[0]);
@@ -30,13 +31,17 @@ class RightOrWrongActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         buttonNo.setOnClickListener {
             val intent = Intent(this, FlashcardActivity::class.java).apply {
                 val first = imageList.removeFirst()
                 imageList.add(2, first)
                 putExtra(EXTRA_WORDLIST, imageList.toIntArray())
             }
+            startActivity(intent)
+        }
+
+        buttonHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
