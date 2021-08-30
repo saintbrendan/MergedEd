@@ -1,14 +1,11 @@
 package com.example.mergeded
 
 import android.content.Intent
-import android.media.Image
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
-import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import com.bumptech.glide.Glide
 
 const val EXTRA_WORDLIST = "com.example.mergeded.WORDLIST"
@@ -16,18 +13,19 @@ const val EXTRA_WORDLIST = "com.example.mergeded.WORDLIST"
 class FlashcardActivity : AppCompatActivity() {
     var imageList = mutableListOf<Int>(
         R.drawable.rest,
-//        R.drawable.climb,
-        R.drawable.cook,
-//        R.drawable.argue,
-        R.drawable.arguing,
-//        R.drawable.cry,
-        R.drawable.crying,
-//        R.drawable.dance,
-        R.drawable.diving,
-//        R.drawable.exercise,
-//        R.drawable.sail,
-//        R.drawable.walk,
-//        R.drawable.write,
+////        R.drawable.hammock,
+        R.drawable.climb,
+        R.drawable.argue,
+        R.drawable.cry,
+        R.drawable.dance,
+        R.drawable.dive,
+        R.drawable.exercise,
+        R.drawable.sail,
+        R.drawable.walk,
+        R.drawable.write,
+        R.drawable.cook_small,
+////        R.drawable.cook_2,
+        R.drawable.cook_big,
     )
     private var mediaPlayer: MediaPlayer? = null
 
